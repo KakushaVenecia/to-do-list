@@ -1,0 +1,52 @@
+
+.input-container{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 15px;
+  text-align: center;
+}
+header{
+  font-size: 40px;
+  text-align: center;
+}
+
+
+
+#start{
+  color:rgb(255, 255, 255);
+  background-color: coral;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 10px;
+  font-size: 0.5em;
+}
+
+#theForm{
+  margin: auto;
+  width: 50%;
+  /* border: 3px solid green; */
+  padding: 10px;
+  text-align: center;
+  border: crimson;
+  width:50%;
+}
+input[type=text]{
+  width: 95%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  resize: vertical;
+}
+i {
+  margin-left: 3px;
+  margin-right: 3px;
+  padding: 5px;
+  background: deeppink;
+  color: white;
+  min-width: 50px;
+  text-align: center;
+}
