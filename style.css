@@ -41,12 +41,20 @@ input[type=text]{
   box-sizing: border-box;
   resize: vertical;
 }
-i {
+button.btn {
   margin-left: 3px;
   margin-right: 3px;
   padding: 5px;
-  background: deeppink;
-  color: white;
+  background-color: deeppink;
+  color: rgb(20, 17, 17);
+  border-radius: 8px;
   min-width: 50px;
   text-align: center;
+  border: none; 
+  font-size: 12px; 
+  cursor: pointer; 
+}
+
+btn::hover{
+  background-color: darkblue;
 }
