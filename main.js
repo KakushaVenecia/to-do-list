@@ -43,6 +43,11 @@ formTask.addEventListener('submit', function(e){
   listItem.style.margin='auto'
   listItem.style.marginTop='10px'
 
+  if (value.trim() === '') {
+    alert('Please add a task!');
+    return;
+  }
+
   deleteBtn.textContent = 'Delete Task';
   deleteBtn.textAlign= 'center';
   deleteBtn.style.backgroundColor='red'
