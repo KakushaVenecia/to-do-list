@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+  <title>My To-Do List</title>
+
+</head>
+<body>
+  <header>
+    <h2>Organize your tasks and boost your productivity</h2>
+    <div>
+      <button id="start" onclick="getStarted()"><i class="fas fa-rocket"></i> Get Started</button>
+    </div>
+  </header>
+  <div id="theForm">
+    <h1>Get it Done <span style="color: var(--secondary-color);">Today</span></h1>
+    <form id="myForm">
+      <div class="input-container">
+        <input type="text" name="task" id="new-task" placeholder="What needs to be done?" />
+        <button class="btn" type="submit"><i class="fas fa-plus"></i> Add Task</button>
+      </div>
+    </form>
+    
+    <div class="filters">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="active">Active</button>
+      <button class="filter-btn" data-filter="completed">Completed</button>
+    </div>
+    
+    <div id="tasks">
+      <!-- Tasks will be added here -->
+      <div class="empty-state">
+        <i class="fas fa-clipboard-list"></i>
+        <p>No tasks yet. Add a task to get started!</p>
+      </div>
+    </div>
+    
+    <div class="task-count">
+      <span id="tasks-counter">0</span> tasks remaining
+    </div>
+  </div>
+ <script src="main.js"></script>
+</body>
+</html>

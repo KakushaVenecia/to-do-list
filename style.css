@@ -1,0 +1,236 @@
+:root {
+    --primary-color: #41d589;
+    --secondary-color: #03340b;
+    --bg-color: #f9faff;
+    --text-color: #333;
+    --delete-color: #ff6b6b;
+    --edit-color: #4dabf7;
+    --complete-color: #51cf66;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    min-height: 100vh;
+    padding-bottom: 50px;
+  }
+
+  header {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+    font-size: 1.2rem;
+    border-radius: 0 0 20px 20px;
+    margin-bottom: 30px;
+    box-shadow: var(--shadow);
+  }
+
+  header button {
+    background-color: white;
+    color: var(--primary-color);
+    border: none;
+    padding: 10px 20px;
+    margin-top: 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: var(--transition);
+    box-shadow: var(--shadow);
+  }
+
+  header button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+  }
+
+  #theForm {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    display: block;
+  }
+
+  h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: var(--primary-color);
+  }
+
+  .input-container {
+    display: flex;
+    margin-bottom: 30px;
+    box-shadow: var(--shadow);
+    border-radius: 50px;
+    overflow: hidden;
+  }
+
+  #new-task {
+    flex: 1;
+    padding: 15px 20px;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+  }
+
+  .btn {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    border: none;
+    padding: 15px 25px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: var(--transition);
+  }
+
+  .btn:hover {
+    background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+  }
+
+  .task-item {
+    background-color: white;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 15px;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .task-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  .task-text {
+    flex: 1;
+    font-size: 1.1rem;
+  }
+
+  .completed {
+    text-decoration: line-through;
+    opacity: 0.7;
+  }
+
+  .task-actions {
+    display: flex;
+    gap: 10px;
+  }
+
+  .action-btn {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .complete-btn {
+    color: var(--complete-color);
+  }
+
+  .edit-btn {
+    color: var(--edit-color);
+  }
+
+  .delete-btn {
+    color: var(--delete-color);
+  }
+
+  .action-btn:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+
+  .edit-input {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid var(--edit-color);
+    border-radius: 5px;
+    margin-right: 10px;
+  }
+
+  .save-btn {
+    background-color: var(--complete-color);
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .empty-state {
+    text-align: center;
+    padding: 30px;
+    color: #888;
+  }
+
+  .empty-state i {
+    font-size: 50px;
+    margin-bottom: 15px;
+    opacity: 0.3;
+  }
+
+  .filters {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    gap: 10px;
+  }
+
+  .filter-btn {
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 8px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: var(--transition);
+  }
+
+  .filter-btn.active {
+    background-color: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+  }
+  
+  .task-count {
+    text-align: center;
+    margin-top: 20px;
+    color: #666;
+    font-size: 0.9rem;
+  }
+  
+  @media (max-width: 600px) {
+    .input-container {
+      flex-direction: column;
+      border-radius: 10px;
+    }
+    
+    #new-task {
+      border-radius: 10px 10px 0 0;
+    }
+    
+    .btn {
+      border-radius: 0 0 10px 10px;
+    }
+    
+    .task-actions {
+      flex-direction: column;
+    }
+  }
